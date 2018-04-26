@@ -1,0 +1,18 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.us.config.PersistenceConfiguration",
+      "name": "flyway",
+      "sourceMethod": "public javax.sql.DataSource flywayDataSource() ",
+      "type": "javax.sql.DataSource"
+    },
+    {
+      "sourceType": "com.us.config.PersistenceConfiguration",
+      "name": "spring.datasource",
+      "sourceMethod": "public javax.sql.DataSource dataSource() ",
+      "type": "javax.sql.DataSource"
+    }
+  ],
+  "properties": []
+}
