@@ -10,6 +10,8 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotBlank;
 
+import io.swagger.annotations.ApiModelProperty;
+
 @Entity
 @Table(name = "SHIPWRECK")
 public class Shipwreck {
@@ -17,18 +19,31 @@ public class Shipwreck {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(unique = true)
+	@ApiModelProperty(notes = "This is ID of Shipwreck")
 	private Long id;
 	
 	@NotBlank
     @Column(unique = true)
     @Size(min = 1, max = 100)
+	@ApiModelProperty(notes = "This is Name of Shipwreck", required=true)
 	private String name;
 	
+	@ApiModelProperty(notes = "This is Description of Shipwreck")
 	private String description;
+	
+	@ApiModelProperty(notes = "This is a Condition of Shipwreck")
 	private String cond;
+	
+	@ApiModelProperty(notes = "This is a Depth where was found Shipwreck")
 	private int depth;
+	
+	@ApiModelProperty(notes = "This is a Latitude where was found Shipwreck")
 	private double latitude;
+	
+	@ApiModelProperty(notes = "This is a Longitude where was found Shipwreck")
 	private double longitude;
+	
+	@ApiModelProperty(notes = "This is a Year when was Discovered Shipwreck")
 	private int yearDiscovered;
 	
 	public Shipwreck(){}

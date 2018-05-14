@@ -29,4 +29,5 @@ public class ShipwreckIntegrationTest {
 		System.out.println(wrecks.size());
 		assertTrue(wrecks.size()>=0);
 	}
+	
 }
