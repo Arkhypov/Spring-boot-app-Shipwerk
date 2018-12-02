@@ -61,6 +61,18 @@
 	        url:'/shipwrecks/:id/edit',
 	        templateUrl: viewsPrefix + 'shipwreck-edit.html',
 	        controller:'ShipwreckEditController'
+	    }).state('login',{
+	        url:'/login',
+	        templateUrl: viewsPrefix + 'login.html',
+	        data: {
+				pageTitle: 'Login'
+			}
+	    }).state('register',{
+	        url:'/register',
+	        templateUrl: viewsPrefix + 'registration.html',
+	        data: {
+				pageTitle: 'Registration'
+			}
 	    })
 	})
 	.directive('updateTitle', ['$rootScope', '$timeout',
